@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purpose Coin Wallet</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .wallet {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .balance {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .balance h2 {
+            margin: 0;
+        }
+
+        .balance span {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .action {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="wallet">
+        <h1>Purpose Coin Wallet</h1>
+
+        <div class="balance">
+            <h2>Balance:</h2>
+            <span id="balance">0 PURPOSE</span>
+        </div>
+
+        <div class="actions">
+            <a href="#" class="action" id="send">Send</a>
+            <a href="#" class="action" id="receive">Receive</a>
+        </div>
+    </div>
+
+    <script>
+        // Example: Simulate balance updates (replace with real data fetching)
+        const balanceElement = document.getElementById('balance');
+        let balance = 0;
+
+        function updateBalance() {
+            balance += Math.floor(Math.random() * 10); // Simulate receiving coins
+            balanceElement.textContent = balance + ' PURPOSE';
+        }
+
+        // Simulate balance updates every 5 seconds
+        setInterval(updateBalance, 5000); 
+
+        // Add event listeners for send and receive buttons (replace with real logic)
+        document.getElementById('send').addEventListener('click', () => {
+            alert('Send functionality is not implemented yet.');
+        });
+
+        document.getElementById('receive').addEventListener('click', () => {
+            alert('Receive functionality is not implemented yet.');
+        });
+    </script>
+</body>
+</html>
