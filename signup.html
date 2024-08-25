@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardo Sign Up</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        select {
+            height: 40px;
+            width: 100%;
+            font-size: 15px;
+            margin-bottom: 18px;
+            padding: 8px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .upload-button {
+            background-color: #fff;
+            color: #000;
+            padding: 10px 20px;
+            border: 1px solid black;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        .upload-button:hover {
+            background-color: #4CAF50;
+        }
+
+        .checkbox {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .checkbox input[type="checkbox"] {
+            margin-right: 5px;
+            position: relative;
+            top: -3px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #4CAF50;
+        }
+
+        .login {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .login a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form>
+            <div>
+                <label for="accountType">Wallet Type:</label>
+                <select id="accountType" name="accountType">
+                    <option value="normal">Normal User</option>
+                    <option value="organization">Organization</option>
+                    <option value="bank">Bank</option>
+                </select>
+            </div>
+
+            <div id="normalUserFields" style="display: block;">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password">
+
+                <label for="panNumber">PAN Numbe:</label>
+                <input type="text" id="panNumber" name="panNumber" placeholder="Enter your PAN Number">
+            </div>
+
+            <div id="organizationFields" style="display: none;">
+                <label for="orgName">Organization Name:</label>
+                <input type="text" id="orgName" name="orgName" placeholder="Enter your organization name">
+
+                <label for="orgEmail">Organization Email:</label>
+                <input type="email" id="orgEmail" name="orgEmail" placeholder="Enter your organization email">
+
+                <label for="orgPassword">Password:</label>
+                <input type="password" id="orgPassword" name="orgPassword" placeholder="Enter your password">
+
+                <label for="orgConfirmPassword">Confirm Password:</label>
+                <input type="password" id="orgConfirmPassword" name="orgConfirmPassword" placeholder="Confirm your password">
+
+                <label for="orgDocuments">Documents:</label>
+                <button type="button" class="upload-button" onclick="document.getElementById('orgDocumentsInput').click()">Upload Documents</button>
+                <input type="file" id="orgDocumentsInput" accept=".pdf,.jpg,.jpeg">
+            </div>
+
+            <div id="bankFields" style="display: none;">
+                <label for="bankName">Bank Name:</label>
+                <input type="text" id="bankName" name="bankName" placeholder="Enter your bank name">
+
+                <label for="branchName">Branch Name:</label>
+                <input type="text" id="branchName" name="branchName" placeholder="Enter your branch name">
+
+                <label for="ifscCode">IFSC Code:</label>
+                <input type="text" id="ifscCode" name="ifscCode" placeholder="Enter your IFSC code">
+
+                <label for="bankPassword">Password:</label>
+                <input type="password" id="bankPassword" name="bankPassword" placeholder="Enter your password">
+
+                <label for="bankConfirmPassword">Confirm Password:</label>
+                <input type="password" id="bankConfirmPassword" name="bankConfirmPassword" placeholder="Confirm your password">
+            </div>
+
+            <div class="checkbox">
+                <input type="checkbox" id="terms" name="terms">
+                <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+        <div class="login">
+            Already have an account? <a href="login.html">Login</a>
+        </div>
+    </div>
+    <script>
+        const accountTypeSelect = document.getElementById('accountType');
+        const normalUserFields = document.getElementById('normalUserFields');
+        const organizationFields = document.getElementById('organizationFields');
+        const bankFields = document.getElementById('bankFields');
+
+        accountTypeSelect.addEventListener('change', function() {
+            normalUserFields.style.display = 'none';
+            organizationFields.style.display = 'none';
+            bankFields.style.display = 'none';
+
+            if (accountTypeSelect.value === 'normal') {
+                normalUserFields.style.display = 'block';
+            } else if (accountTypeSelect.value === 'organization') {
+                organizationFields.style.display = 'block';
+            } else if (accountTypeSelect.value === 'bank') {
+                bankFields.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
