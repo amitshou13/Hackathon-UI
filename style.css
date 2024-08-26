@@ -123,6 +123,7 @@ body {
     display: flex;
     color: #fff;
     font-size: xx-large;
+    font-weight: 700;
     justify-content: center;
   }
 
@@ -150,10 +151,69 @@ body {
   }
 
   .how-it-works {
-    
-    background-color: yellow;
+    height: fit-content;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
   }
 
+  .how-it-works span h1 {
+    font-size: xx-large;
+    font-weight: 700;
+  }
+
+  .hcard {
+    background-color: #fff;
+    border: none;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+    width: 80%;
+    padding: 40px 70px;
+    box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.1);
+    margin-top: 0 auto;
+
+    animation: move 5s;
+    animation-timeline: view();
+    animation-range: entry 20%;
+  }
+
+  @keyframes move{
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+
+  .hcard .left h1 {
+    font-size: xx-large;
+  }
+
+  .hcard .left p {
+    font-size: large;
+  }
+
+  .hcard .right {
+    
+  }
+
+  .hcard .right img{
+    height: 250px;
+    width: 250px;
+    padding-right: 70px;
+  }
+
+  .hcard .numbers {
+    height: 40px;
+    width: 40px;
+  }
 
   footer {
     background-color: #fff;
