@@ -1,13 +1,5 @@
-gsap.from(".how-it-works .hcard", {
-    y: 90,
-    opacity: 0,
-    duration: 1,
-    scrollTrigger: {
-      trigger: ".hcard",
-      scroller: "body",
-      markers:true,
-      start: "top 70%",
-      end: "top 65%",
-      scrub: 1,
-    },
-});
+hero = document.querySelector(".hero");
+whyUs = document.querySelector(".why-us");
+howItWorks = document.querySelector(".how-it-works");
+
+about = document.querySelector(".about");

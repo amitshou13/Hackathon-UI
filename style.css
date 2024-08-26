@@ -35,7 +35,7 @@ body {
   }
 
   nav li {
-    margin-right: 20px;
+    margin-right: 40px;
   }
 
   nav a {
@@ -216,14 +216,46 @@ body {
   }
   
   .container-about{
-    
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .container-about img{
+    width: 700px;
+  }
+
+  .container-about p{
+    font-size: large;
   }
 
   .container-about h2{
     font-size: 50px;
   }
 
-  .hero,.why-us,.how-it-works{
-    /* display: none; */
+  .about-features{
+    display: flex;
+    gap: 50px;
   }
+
+  .feature{
+    background-color: #00c853;
+    padding: 20px 40px;
+    border-radius: 10px;
+    color: white;
+  }
+
+  .feature h3{
+    font-size: 25px;
+  }
+  .feature p{
+    font-size: large;
+  }
+
+  .section-cta{
+    margin-top: 50px;
+    font-size: larger;
+  }
+
+  
 
