@@ -15,7 +15,7 @@ body {
   }
 
   section {
-    padding: 40px 70px;
+    padding: 40px 150px;
   }
 
   .logo {
@@ -158,36 +158,28 @@ body {
 }
 
   .how-it-works {
-    height: fit-content;
     background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
   }
 
   .how-it-works span h1 {
     font-size: xx-large;
+    text-align: center;
     font-weight: 700;
   }
 
   .hcard {
     background-color: #fff;
-    border: none;
     border-radius: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 300px;
-    width: 80%;
-    padding: 40px 70px;
+    margin: 30px 0;
+    padding: 40px 20px 40px 100px;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.08);
-    margin-top: 0 auto;
-
-    animation: move 5s;
+    animation: move linear;
     animation-timeline: view();
-    animation-range: entry 20%;
+    animation-range: entry 0% cover 40%;
   }
 
   @keyframes move{
