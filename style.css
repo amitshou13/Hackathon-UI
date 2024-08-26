@@ -2,7 +2,6 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
     box-sizing: border-box;
   }
 
@@ -199,10 +198,6 @@ body {
     font-size: large;
   }
 
-  .hcard .right {
-    
-  }
-
   .hcard .right img{
     height: 250px;
     width: 250px;
@@ -219,3 +214,16 @@ body {
     padding: 20px;
     text-align: center;
   }
+  
+  .container-about{
+    
+  }
+
+  .container-about h2{
+    font-size: 50px;
+  }
+
+  .hero,.why-us,.how-it-works{
+    /* display: none; */
+  }
+

@@ -10,6 +10,80 @@
   background-color: #f5f5f5;
 }
 
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+  }
+
+  header {
+    background-color: #fff;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  section {
+    padding: 40px 150px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 30px;
+    margin-right: 10px;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  nav li {
+    margin-right: 20px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  .cta-buttons a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .cta-buttons {
+    display: flex;
+  }
+
+  .cta-buttons button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .cta-buttons button:first-child {
+    background-color: #00c853;
+    color: #fff;
+  }
+
+  .cta-buttons button:last-child {
+    background-color: #fff;
+    color: #00c853;
+    border: 1px solid #00c853;
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -67,6 +141,25 @@
     </style>
 </head>
 <body>
+
+  <header>
+    <div class="logo">
+      <h1>PurposeCoin</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">My Wallet</a></li>
+        <li><a href="#">Open Source</a></li>
+      </ul>
+    </nav>
+    <div class="cta-buttons">
+      <a href="./login.html"><button style="background-color: #00c853; color: #fff;">Login</button></a>
+      <a href="./signup.html"><button>Sign Up</button></a>
+    </div>
+  </header>
+
     <section class="about">
         <div class="container">
           <h2 class="section-title">About Purpose Coin</h2>
