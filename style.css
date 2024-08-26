@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
+    box-sizing: border-box;
   }
 
   header {
@@ -112,11 +113,13 @@ body {
 
   .why-us {
     height: 70vh;
-    padding-top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: #00c853;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
   }
 
   .why-us h1 {
@@ -139,14 +142,14 @@ body {
   .card {
     height: 100%;
     width: 17%;
-    border: 2px solid #00c853;
     border-radius: 20px;
-    padding: 5cqmin;
+    padding: 40px;
     display: flex;
     margin-top: 20px;
     flex-direction: column;
     justify-content: center;
-    /* text-align: center; */
+    text-align: center;
+    align-items: center;
     background-color: #fff;
   }
 
@@ -179,7 +182,7 @@ body {
     height: 300px;
     width: 80%;
     padding: 40px 70px;
-    box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.08);
     margin-top: 0 auto;
 
     animation: move 5s;
